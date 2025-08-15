@@ -1,31 +1,55 @@
 # VoI_cell_level
 
-This repository contains the codebase for the manuscript "Evaluating the value of cell-level information in multi-objective forest planning"
+This repository contains the codebase for the manuscript:  
+**"Evaluating the Value of Cell-Level Information in Multi-Objective Forest Planning"**
 
-The following files are contained in this directory:
+---
 
-README.md -- brief instructions to run the analysis.
+## Repository Structure
 
-Data folder:
-    
-    2025-03-27_stands_30_GIT.parquet - input file for optimization that contains data for stands. This file is the output of the forest simulator Gaya 2.0
-    
-    2025-08-13_cells_30_clustered_GIT_compressed.parquet - input file for optimization that contains data for cells. This file is the output of the forest simulator Gaya 2.0. It also includes additional columns to identify what segment each cells belongs within each cluster. Each cluster is presented as new column. An additional column is added to identify what stand each cells belongs to (stands as cluster case)
-    
-    grouping_options_4cells.pkl - dictionary with segmentation information to be used in the optimization for the cluster case. 
+### 📄 README
+- **README.md** — Brief instructions to run the analysis.
+
+### 📂 Data
+- **2025-03-27_stands_30_GIT.parquet**  
+  Input file for optimization containing stand-level data.  
+  - This is the output file from the forest simulator **Gaya 2.0**.
+
+- **2025-08-13_cells_30_clustered_GIT_compressed.parquet**  
+  Input file for optimization containing cell-level data.  
+  - This is the output file from the forest simulator **Gaya 2.0**.  
+  - Includes additional columns for segmentation information:  
+    - Each cluster is presented as a separate column.  
+    - An additional column identifies which stand each cell belongs to (stand as cluster case).  
+
+- **grouping_options_4cells.pkl**  
+  Dictionary with segmentation information used in optimization for the cluster case.
+
+### 📂 Python
+- **2025-03-13_fixing_broken_cells.ipynb**  
+  Code to fix fragmented ("broken") cells along stand boundaries.  
+  - Only required if input data does not already include uniform cells.
+
+- **2025-03-25_segmentation_clusters.ipynb**  
+  Code for segmentation and creation of multiple clusters.
+
+- **2025-03-26_Optimization_no_cluster.ipynb**  
+  Optimization model **without clusters**.  
+  - Used for treating stands and cells as independent management units.
+
+- **2025-03-29_Optimization_clusters.ipynb**  
+  Optimization model **with clusters**.  
+  - The model determines the optimal cluster for the given problem.
+
+- **2025-03-31_optimization_cluster_iterative.ipynb**  
+  Alternative cluster optimization formulation.  
+  - Solves each cluster separately and saves outputs.  
+  - The optimal cluster could then be determined by comparing resulting objective function values.  
+  - Advantage: enables exploration of output distributions across clusters.
+
+---
 
 
-Python folder:
-
-    2025-03-13_fixing_broken_cells.ipynb - code used to fix the "broken" fragmented cells along stand boundaries. Only needed to be used if the input data does not include uniform cells.
-
-    2025-03-25_segmentation_clusters.ipynb - code used for segmentation and creation of multiple clusters.
-
-    2025-03-26_Optimization_no_cluster.ipynb - code for optimization without inclusion of clusters. Used for optimizing stands and cells as independent management units.
-
-    2025-03-29_Optimization_clusters.ipynb - code for optimization of clusters. The model will define the optimal cluster for a problem to be solved. 
-
-    2025-03-31_optimization_cluster_iterative.ipynb - and an alternative formulation for solving the clusters. In this version, the model will solve each cluster separately and save the outputs. The optimal cluster could be then defined by defining which cluster produced the best objective function. This version of the model could be advantageous to see the distribution of the outputs. 
 
 
 
