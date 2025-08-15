@@ -1,4 +1,4 @@
-# VoI_cell_level
+# Codebase for evaluating the value of cell-level information 
 
 This repository contains the codebase for the manuscript:  
 **"Evaluating the value of cell-level information in multi-objective forest planning"**
@@ -47,6 +47,24 @@ This repository contains the codebase for the manuscript:
   - The optimal cluster could then be determined by comparing resulting objective function values.  
   - Advantage: enables exploration of output distributions across clusters.
 
+## Guidance to Replicate Results
+
+To reproduce the results presented in the paper, run the following notebooks sequentially:
+
+1. **Run `2025-03-26_Optimization_no_cluster.ipynb`**  
+   - Evaluates the performance of stands and cells without clusters. Run stands and cells separately.
+   - Apply the codes at the end of the notebook to compute the results from applying decisions from stands onto underlying cells.  
+   - Produces results for reference (cell-level with no segmentation) and stand-level solutions.
+
+2. **Run `2025-03-29_Optimization_clusters.ipynb`**  
+   - Evaluates which cluster is optimal.  
+
+3. *(Optional)* **Run `2025-03-31_optimization_cluster_iterative.ipynb`**  
+   - Iteratively solves clusters separately and saves outputs for each.  
+   - Useful if computational resources are limited or if you want to analyze the distribution of outputs.
+
+4. **For re-creating or adjusting clusters:**  
+   - Use `2025-03-25_segmentation_clusters.ipynb`.
 ---
 
 
