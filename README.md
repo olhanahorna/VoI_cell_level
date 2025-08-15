@@ -1,7 +1,7 @@
 # VoI_cell_level
 
 This repository contains the codebase for the manuscript:  
-**"Evaluating the Value of Cell-Level Information in Multi-Objective Forest Planning"**
+**"Evaluating the value of cell-level information in multi-objective forest planning"**
 
 ---
 
