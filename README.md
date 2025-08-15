@@ -63,8 +63,7 @@ To reproduce the results presented in the paper, run the following notebooks seq
    - Iteratively solves clusters separately and saves outputs for each.  
    - Useful if computational resources are limited or if you want to analyze the distribution of outputs.
 
-4. **For re-creating or adjusting clusters:**  
-   - Use `2025-03-25_segmentation_clusters.ipynb`.
+
 ---
 
 
