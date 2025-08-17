@@ -62,6 +62,7 @@ To reproduce the results presented in the paper, run the following notebooks seq
 3. *(Optional)* **Run `2025-03-31_optimization_cluster_iterative.ipynb`**  
    - Iteratively solves clusters separately and saves outputs for each.  
    - Useful if computational resources are limited or if you want to analyze the distribution of outputs.
+   - Could be used to solve stands as cluster case separately.
 
 
 ---
