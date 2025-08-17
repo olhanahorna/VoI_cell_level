@@ -59,10 +59,10 @@ To reproduce the results presented in the paper, run the following notebooks seq
 2. **Run `2025-03-29_Optimization_clusters.ipynb`**  
    - Evaluates which cluster is optimal.  
 
-3. *(Optional)* **Run `2025-03-31_optimization_cluster_iterative.ipynb`**  
-   - Iteratively solves clusters separately and saves outputs for each.  
-   - Useful if computational resources are limited or if you want to analyze the distribution of outputs.
-   - Could be used to solve stands as cluster case separately.
+3. **Run `2025-03-31_optimization_cluster_iterative.ipynb`**  
+   - Iteratively solves clusters separately and saves outputs for each. 
+   - Used to solve stands as cluster case separately by identifying stand ID column for cluster index.
+   - (Optional) Useful if computational resources are limited or if you want to analyze the distribution of outputs.
 
 
 ---
